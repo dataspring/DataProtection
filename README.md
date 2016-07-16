@@ -50,7 +50,7 @@ implementation on an intelligent and mathematical foundation.
 > that effort to positively make some impact on data sharing in
 > enterprise and public realm.
 
-<span id="_Toc445326562" class="anchor"></span> 
+<a name="_Toc445326562"></a> 
 ### 1. Exploratory Data Analysis ###
 
 **Data Summary:**
@@ -124,8 +124,7 @@ than or equal to 500 data points.
 
     Figure: 2
 
-<span id="_Toc219701708" class="anchor"><span id="_Toc445326563"
-    class="anchor"></span></span>
+<a name="_Toc219701708"></a> 
  ### 2. Behavior Pattern and Invincibility Myth ###
 
 Study of human mobility data on various mobility datasets by
@@ -427,7 +426,7 @@ privacy attack successfully. In US, web reverse phone and cell search is
 available over web and can be efficient tool to narrow people search to
 a location.
 
-<span id="_Toc445326564" class="anchor"></span>
+<a name="_Toc445326564"></a> 
 ### 3. Privacy Preserving Methods ###
 
 **Privacy Breach**
@@ -684,7 +683,7 @@ addNoise(obj, variables = NULL, noise = 150, method = "additive", ...)
  deal with trajectory anonymization but it’s effect in tandem with
  point coordinate perturbation needs to be studied further.
 
-<span id="_Toc445326565" class="anchor"></span>
+<a name="_Toc445326565"></a> 
 ### 4. Risk Assessment Framework ###
 
 Risk Assessment Framework (here afterwards interchangeably used with
@@ -859,7 +858,8 @@ be compared against for IL and DR metrics mentioned above.
 Now we have to use all the PPM methods and plot Recall and IPR to see
 how the masking methods fare against IL and DR.
 
-<span id="_Toc445326566" class="anchor"></span>
+
+<a name="_Toc445326566"></a> 
 ### 5. Code, Analysis & Results ###
 
 Since this proposal emphasizes on concepts first, a comprehensive code
