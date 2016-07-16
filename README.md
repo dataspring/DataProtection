@@ -867,7 +867,7 @@ regime to verify has been reserved for further work with this proposal
 being selected for co-development. 
 Preliminary proof of concept code is available in the R-Scripts folder.
 
-<span id="_Toc445326567" class="anchor"></span>
+<a name="_Toc445326567" ></a>
 ### 6. References & Consideration ###
 
 **Advanced Privacy Preservation Method Considerations**
