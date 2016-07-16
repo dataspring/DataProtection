@@ -72,8 +72,7 @@ in each location, yielded this graph by super imposing Singapore map
 cadastral](https://data.gov.sg/dataset/sla-cadastral-map-index) map
 index.
 
-<img src="Images/01-sla-cadastral.png" width="400"
-    height="300">
+<img src="Images/01-sla-cadastral.png" width="500" height="680">
 
 Figure: 1
 
@@ -121,8 +120,7 @@ than or equal to 500 data points.
     highly frequented by the sample population. A sample graph
     illustrating this is given below
 
-    ![](media/image2.png){width="4.608333333333333in"
-    height="3.5416666666666665in"}
+    <img src="Images/02-top-n-locations.png" width="400" height="380">
 
     Figure: 2
 
@@ -194,7 +192,7 @@ completely different: traffic starts between 7am and 8am and then
 remains relatively stable throughout the day, with a slight increase
 of traffic just before dinnertime.
 
-![alt text](/dataspring/DataProtection/blob/master/Images/01-sla-cadastral.png, "01-sla-cadastral")
+ <img src="Images/03-weekly-pattern.png" width="602.4" height="266.4">
 
 Daily and Weekly Patterns in Human Mobility Figure: 3.
 
@@ -207,7 +205,8 @@ to watch out during the analysis. Any rather average pattern can be
 further, investigated by focusing on user with more trajectory
 points as in Figure 4.
 
-![](media/image4.png){width="6.275in" height="2.775in"}
+<img src="Images/04-weekday-pattern.png" width="602.4" height="266.4">
+
 
 Travel activities on weekdays of the hypothetical top users: Figure:
 4
@@ -229,12 +228,11 @@ weekend, in the morning. ‘Location 13’ is visited in evening hours
 during the week; in the weekends, location 13 is usually visited
 during the day, in particular late afternoon.
 
-![](media/image5.png){width="5.841666666666667in"
-height="3.0083333333333333in"}
+<img src="Images/05-user-daily-travel.png" width="560.8" height="288.8">
 
 Daily travel activities of user 160 on weekdays Figure: 5
 
-![](media/image6.png){width="6.075in" height="3.0416666666666665in"}
+<img src="Images/06-user-wkend-travel.png" width="560.8" height="288.8">
 
 Daily travel activities of user 160 during the weekend Figure: 6
 
@@ -268,8 +266,7 @@ is often visited from home, but also from his office. Location 26,
 Location 3 and various other locations are only visited when user
 160 happens to be at Location 2 (‘Shopping mall’).
 
-![](media/image7.png){width="5.241666666666666in"
-height="4.308333333333334in"}
+<img src="Images/07-user-location-freq.png" width="503.2" height="413.6">
 
 Connections between user 160’s locations - the thicker the edge, the
 more often user 160 traveled between these two locations. Figure: 7
@@ -329,8 +326,7 @@ decimal precision geo coordinates to nearest SLA cadastral plot
 coordinates, we can list the location of the prospective find. The
 simple code is give as below and uses R package ggmap.
 
-![](media/image9.png){width="6.141666666666667in"
-height="1.7416666666666667in"}
+<img src="Images/08-reverse-geocode-lookup.png" width="589" height="167">
 
 **LinkedIn Connection**
 
@@ -340,8 +336,7 @@ further simplify zeroing in the target. Below snippet from the [LinkedIn
 API](https://developer-programs.linkedin.com/documents/people-search-api)
 gives the power of people search:
 
-![](media/image10.png){width="6.466666666666667in"
-height="1.2666666666666666in"}
+<img src="Images/09-linkedin-searchapi.png" width="589" height="167">
 
 The sample output as below from LinkedIn provides every possible vector
 to identify our target.
@@ -487,7 +482,7 @@ From the given data, identifying the unique coordinates, we find that
 the average distance between points is \~1.1 km, in line to the
 precision of latitude and longitude at equator.
 
-![](media/image12.png){width="4.36581583552056in" height="3.225in"}
+<img src="Images/10-grid-masking.png" width="419" height="309">
 
 Another observation is al nearest/subsequent neighbors are more or less
 spaced by 1.1 km spacing due to the data provided in 2 decimal
@@ -496,7 +491,7 @@ spacing need not be to 2 decimal spacing and their location will be
 absolute and from there getting to 2 or &gt; 2 decimal spacing is a
 matter of privacy vs. data utility assessment decision.
 
- ![](media/image13.png){width="5.194729877515311in" height="2.95in"}
+<img src="Images/12-grid-masking2.png" width="419" height="309">
 
  K-means clustering is simple and easily achievable and with the given
  data set, points cloistering around a grid matrix of 1.1 x 1.1, we can
@@ -505,20 +500,18 @@ matter of privacy vs. data utility assessment decision.
  with 4\~5 locations per grid amounts to 50 k-means clusters). This is
  also corroborated from the CrimeStat program results below.
 
- ![](media/image14.png){width="5.669612860892388in"
- height="3.1416666666666666in"}
+<img src="Images/10-grid-masking3.png" width="544" height="301">
 
 **K-means clustering**
 
  We can apply the above reasoning in R to obtain the cluster points:
 
- ![](media/image15.png){width="5.908333333333333in"
- height="4.508333333333334in"}
+<img src="Images/13-kmeans-clustering.png" width="567" height="311">
 
  This gives you the clusters and as shown in the below map, we can also
  find the centroids and map them too.
 
- ![](media/image16.png){width="6.466666666666667in" height="5.475in"}
+<img src="Images/14-kmeans-clustering-plot.png" width="620" height="525">
 
  These centroids provide the masking. For all the data points, we
  replace lat/long coordinates with their centroids. Essentially this is
@@ -647,8 +640,7 @@ ggplot(data=geod, aes(x=geod$lat,y=geod$long)) +
 
  Below is the Voronoi diagram for the 488 points given in the dataset.
 
- ![](media/image18.png){width="5.3578291776028in"
- height="4.791666666666667in"}
+<img src="Images/15-vornoi-plot.png" width="514" height="460">
 
  We have to implement a snapping algorithm than can snap equidistant
  points to test the hypothesis.
@@ -755,9 +747,7 @@ We’ll use 2 metrics to measure IL:
     This gives a general idea of how far the original and masked are
     using standard measures of statistics. A lower value is best bet
     at IL.
-
-    ![](media/image19.png){width="5.191666666666666in"
-    height="5.198635170603675in"}
+<img src="Images/16-info-loss-formulae.png" width="514" height="514">
 
 2. **IL based on eigenvalues comparison:**
 
@@ -765,9 +755,8 @@ We’ll use 2 metrics to measure IL:
     compute IL. This measures distances between original and perturbed
     values, scaled by standard deviation using eigen method. (dUtility
     in R’s sdcMicro package ). Formally for each record i,
-
-    ![](media/image20.png){width="3.775in"
-    height="0.9583333333333334in"}
+    
+    <img src="Images/17-info-loss-eigen.png" width="354" height="84">
 
     Where V is the number of attributes, M number of records, x~ij~
     denotes the value of record I for attribute j, x’~ij~ the same for
@@ -807,9 +796,8 @@ We’ll use 2 metrics to measure IL:
  values of these box plots should be less than the original values.
 
  Here’s a sample illustration:
-
- ![](media/image21.png){width="4.691666666666666in"
- height="2.932292213473316in"}
+ 
+<img src="Images/18-topN-loc-probability.png" width="450" height="280">
 
 **Evaluating Utility on Privacy Breach vs Recall:**
 
@@ -844,8 +832,7 @@ We’ll use 2 metrics to measure IL:
 
  Now, we define a breach of privacy as follows:
 
- ![](media/image22.png){width="4.442318460192476in"
- height="1.3166666666666667in"}
+<img src="Images/19-privacy-breach-eval.png" width="426" height="110">
 
 IPR (T\*) stands for increased privacy ratio measures the attacker’s
 ability to cause privacy breach after observing the privatized data set
