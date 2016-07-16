@@ -9,7 +9,7 @@ the risk of re-identification of individuals while
 maintaining the utility value of the dataset.
 
 ##How it was Solved?##
-<i><small>[R code for the solution is in R-Scripts folder and was submitted on Mar 2016]</small></i>
+<i><small>[R code for the solution is in R-Scripts folder and was submitted to dextra.sg on Mar 2016 and was among the finalists to present to team of judges]</small></i>
 
 Below is the reasoning and solution discussion for the telecom dataset provided for which privacy needs to be maintained. Hope it is useful to aspiring ones starting on location privacy. Contains detailed discussion on the approach, methodology, R code from PoC for the solution proposed.
 
