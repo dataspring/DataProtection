@@ -6,7 +6,7 @@ framework and privacy preserved method to measure
 the risk of re-identification of individuals while
 maintaining the utility value of the dataset.
 
-Below is the reasoning and solution discussion for the telecom dataset provided for which privacy needs to be maintained. Hope it is useful to aspiring ones starting on location privacy. Contains detailed discussion on the approach, methodology, code snippets from PoC for the solution proposed.
+Below is the reasoning and solution discussion for the telecom dataset provided for which privacy needs to be maintained. Hope it is useful to aspiring ones starting on location privacy. Contains detailed discussion on the approach, methodology, R code from PoC for the solution proposed.
 
 [1. Exploratory Data Analysis](#_Toc445326562)
 
