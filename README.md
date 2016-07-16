@@ -6,6 +6,8 @@ framework and privacy preserved method to measure
 the risk of re-identification of individuals while
 maintaining the utility value of the dataset.
 
+Below is the reasoning and solution discussion for the telecom dataset provided for which privacy needs to be maintained. Hope it is useful to aspiring ones starting on location privacy. Contains detailed discussion on the approach, methodology, code snippets from PoC for the solution proposed.
+
 [1. Exploratory Data Analysis](#_Toc445326562)
 
 [2. Behavior Pattern and Invincibility Myth](#_Toc445326563)
@@ -191,8 +193,7 @@ completely different: traffic starts between 7am and 8am and then
 remains relatively stable throughout the day, with a slight increase
 of traffic just before dinnertime.
 
-![](media/image3.png){width="6.241666666666666in"
-height="2.941666666666667in"}
+![alt text](/dataspring/DataProtection/blob/master/Images/01-sla-cadastral.png, "01-sla-cadastral")
 
 Daily and Weekly Patterns in Human Mobility Figure: 3.
 
