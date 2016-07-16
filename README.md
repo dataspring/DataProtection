@@ -72,9 +72,8 @@ in each location, yielded this graph by super imposing Singapore map
 cadastral](https://data.gov.sg/dataset/sla-cadastral-map-index) map
 index.
 
-![](Images/01-sla-cadastral.png){width="4.608333333333333in"
-    height="3.5416666666666665in"}
-
+<img src="Images/01-sla-cadastral.png" width="4.608333333333333in"
+    height="3.5416666666666665in">
 
 Figure: 1
 
